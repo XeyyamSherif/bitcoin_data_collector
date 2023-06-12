@@ -36,7 +36,7 @@ For Ubuntu:
         source venv/bin/activate
 
 3. Install the requirements with this command in enviroment
-    -  `pip install -r requirements.txt`
+    -  `pip3 install -r requirements.txt`
 
 ## Usage of script
 
