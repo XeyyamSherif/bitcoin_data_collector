@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Candlestick Chart</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Candlestick Chart</h1>
+    <div id="candlestick-chart"></div>
+
+    <script>
+        // Retrieve candlestick data from Flask app
+        var candlestickData = {{ candlestick_data|safe }};
+        console.log(candlestickData)
+
+        Plotly.newPlot('candlestick-chart', [{
+            type: 'candlestick',
+            x: candlestickData.x,
+            open: candlestickData.open,
+            high: candlestickData.high,
+            low: candlestickData.low,
+            close: candlestickData.close
+        }])
+
+    </script>
+</body>
+</html>
