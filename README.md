@@ -20,19 +20,19 @@ This Flask application displays a candlestick chart using data from a CSV file. 
 2. Install the required dependencies using pip:
 3. Activate virtual enviroment:
 
-For window
-    - Create a virtual environment
-        python -m venv venv
+For windows
+    - create a virtual environment
+    - python -m venv venv
 
     - Activate the virtual environment
         venv\Scripts\activate
 
 For Ubuntu
-    - Create a virtual environment
-    python3 -m venv venv
+    - create a virtual environment
+    - python3 -m venv venv
 
     - Activate the virtual environment
-    source venv/bin/activate
+        source venv/bin/activate
 
 ## Usage of script
 
