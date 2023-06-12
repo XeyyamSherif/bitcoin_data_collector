@@ -6,6 +6,9 @@ This application collects data from the Binance API for a specified interval and
 
 This Flask application displays a candlestick chart using data from a CSV file. The app utilizes the Plotly library to generate dynamic candlestick charts.
 
+
+First run the script then flask app
+
 ## Requirements
 
 - Python 3.x
