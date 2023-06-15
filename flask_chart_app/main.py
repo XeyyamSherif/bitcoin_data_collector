@@ -10,7 +10,8 @@ app = Flask(__name__)
 def index():
     try:
         # Check if the file exists
-        file_path = 'BTCUSDT_1d_data.csv'
+        file_path = 'crypto_data.csv'
+        print(os.path.isfile(file_path))
         if not os.path.isfile(file_path):
             raise FileNotFoundError
         
@@ -29,7 +30,6 @@ def index():
 
     except FileNotFoundError:
         error_message = "Data file not found."
-        print('salam')
         return render_template('error.html', error_message=error_message)
 
 if __name__ == '__main__':

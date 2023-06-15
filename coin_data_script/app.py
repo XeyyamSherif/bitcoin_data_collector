@@ -10,14 +10,13 @@ class BinanceDataCollector:
     def collect_data(self):
         try:
             url = f"https://api.binance.com/api/v3/klines?symbol={self.symbol}&interval={self.interval}"
-            print(url)
             response = requests.get(url)
             data = response.json()
 
             df = self._format_data(data)
 
             # Save data to CSV
-            csv_filename = f"{self.symbol}_{self.interval}_data.csv"
+            csv_filename = "crypto_data.csv"
             df.to_csv(csv_filename, index=False)
 
             # Save data to relational database (SQLite in this example)
@@ -40,7 +39,7 @@ class BinanceDataCollector:
     def _save_to_database(self, df):
         try:
             conn = sqlite3.connect('crypto_data.db')
-            table_name = f"{self.symbol}_{self.interval}_data"
+            table_name = "coin_data"
             df.to_sql(table_name, conn, if_exists='replace', index=False)
             conn.close()
         except sqlite3.Error as e:
