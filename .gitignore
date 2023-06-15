@@ -1,2 +1,6 @@
 venv
 /venv
+BTCUSDT_1d_data.csv
+/BTCUSDT_1d_data.csv
+crypto_data.db
+/crypto_data.db
